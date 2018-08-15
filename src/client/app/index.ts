@@ -19,10 +19,10 @@ const app = new App(
     state: namespaced.state,
     actions: namespaced.actions,
     effects: namespaced.effects
-  },
-  {
-    devtools: 'localhost:1234'
   }
+  // {
+  //   devtools: 'localhost:1234'
+  // }
 )
 
 export type Connect = TConnect<typeof app.state, typeof app.actions>
