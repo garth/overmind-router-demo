@@ -8,6 +8,7 @@ type Router = {
   ) => {
     homeRouted: typeof app.actions.home.homeRouted
     personRouted: typeof app.actions.people.personRouted
+    notFoundRouted: typeof app.actions.home.notFoundRouted
   }
 }
 
@@ -31,7 +32,8 @@ export const router: Router = {
     return {
       homeRouted: route('/', (() => app.actions.home.homeRouted()) as typeof app.actions.home.homeRouted),
       personRouted: route('/person/:personId', (params =>
-        app.actions.people.personRouted(params)) as typeof app.actions.people.personRouted)
+        app.actions.people.personRouted(params)) as typeof app.actions.people.personRouted),
+      notFoundRouted: route('/*', (() => app.actions.home.notFoundRouted()) as typeof app.actions.home.notFoundRouted)
     }
   }
 }

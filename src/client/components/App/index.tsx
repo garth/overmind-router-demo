@@ -31,6 +31,8 @@ const App: React.StatelessComponent<ConnectWithComponent> = ({ app, Component })
         <button className="button" onClick={() => app.actions.router.personRouted({ personId: '2' })}>
           person 2
         </button>
+        {' | '}
+        <a href="/missing-link">missing link</a>
       </div>
       <hr />
       <Component />
