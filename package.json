@@ -1,0 +1,37 @@
+{
+  "name": "overmind-router",
+  "version": "1.0.0",
+  "author": "Garth Williams <garth@wi.llia.ms>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "parcel build src/client/index.html",
+    "start": "parcel src/client/index.html --port 3000",
+    "prettier": "prettier --write \"src/**/*.js\" \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\""
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "jsxBracketSameLine": true
+  },
+  "devDependencies": {
+    "@types/page": "^1.5.32",
+    "@types/react": "^16.4.9",
+    "@types/react-dom": "^16.0.7",
+    "node-sass": "^4.9.3",
+    "npm-run-all": "^4.1.3",
+    "parcel": "^1.9.7",
+    "prettier": "^1.14.2",
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "page": "^1.8.6",
+    "overmind": "^1.0.0-1534228708728",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-overmind": "^1.0.0-1533059066486"
+  }
+}
