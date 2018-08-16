@@ -1,7 +1,7 @@
 import App, { TConnect, TEffects, TAction, namespaces } from 'react-overmind'
-import { people } from './people'
-import { router } from './router'
-import { home } from './home'
+import * as people from './people'
+import * as router from './router'
+import * as home from './home'
 
 const namespaced = namespaces({
   home,
@@ -27,4 +27,3 @@ const app = new App(
 
 export type Connect = TConnect<typeof app.state, typeof app.actions>
 export const connect = app.connect
-export default app
