@@ -1,31 +1,17 @@
-import page from 'page'
-import { Action } from '../'
-import { RouteTypes, routes } from './routes'
+import { route } from './route'
+export { state } from './state'
+import { homeRouted } from '../home/actions/homeRouted'
+import { notFoundRouted } from '../home/actions/notFoundRouted'
+import { personRouted } from '../people/actions/personRouted'
 
-export interface Route<Params = void> {
-  (params?: Params): void
+type Actions = {
+  homeRouted: typeof homeRouted
+  personRouted: typeof personRouted
+  notFoundRouted: typeof notFoundRouted
 }
 
-type State = {
-  page: string
+export const actions: Actions = {
+  homeRouted: route('/', homeRouted),
+  personRouted: route('/person/:personId', personRouted),
+  notFoundRouted: route('/*', notFoundRouted)
 }
-
-export const state: State = {
-  page: ''
-}
-
-type RouterActions = (action: Action) => RouteTypes
-type RouterAction<Params = void> = (action: Action) => Route<Params>
-
-export const actions: RouterActions = action =>
-  routes(<Params>(url: string, routeAction: RouterAction<Params>) => {
-    page(url, ({ params }) => routeAction(action)(params as Params))
-    return action<Params>().map((_, params) => {
-      const urlWithReplacedParams = Object.keys(params || {}).reduce((currentUrl, param) => {
-        return currentUrl.replace(`:${param}`, params[param])
-      }, url)
-      page.show(urlWithReplacedParams)
-    })
-  })
-
-setTimeout(() => page.start(), 0)
