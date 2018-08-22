@@ -4,7 +4,9 @@ type ActionBase = (action: Function) => any
 
 export const route = <T extends ActionBase>(url: string, routeAction: T): T =>
   (action => {
-    page(url, ({ params }) => routeAction(action)(params))
+    const execRouteAction = routeAction(action)
+    execRouteAction['displayName'] = `${url} routed`
+    page(url, ({ params }) => execRouteAction(params))
     return action().map((_, params) => {
       const urlWithReplacedParams = Object.keys(params || {}).reduce((currentUrl, param) => {
         return currentUrl.replace(`:${param}`, params[param])
