@@ -1,0 +1,1 @@
+export { notFoundRouted } from './notFoundRouted'

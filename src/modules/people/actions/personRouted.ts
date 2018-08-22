@@ -1,4 +1,4 @@
-import { Action } from '../../'
+import { Action } from '../../../app'
 
 type PersonRoutedProps = { personId: string }
 

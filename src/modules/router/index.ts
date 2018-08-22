@@ -1,8 +1,9 @@
 import { route } from './route'
 export { state } from './state'
+
 import { homeRouted } from '../home/actions/homeRouted'
-import { notFoundRouted } from '../home/actions/notFoundRouted'
 import { personRouted } from '../people/actions/personRouted'
+import { notFoundRouted } from '../../actions/notFoundRouted'
 
 type Actions = {
   homeRouted: typeof homeRouted

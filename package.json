@@ -5,8 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "parcel build src/client/index.html",
-    "start": "parcel src/client/index.html --port 3000",
+    "build": "parcel build src/index.html",
+    "start": "parcel src/index.html --port 3000",
     "prettier": "prettier --write \"src/**/*.js\" \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\""
   },
   "prettier": {
@@ -17,8 +17,8 @@
     "jsxBracketSameLine": true
   },
   "devDependencies": {
-    "@types/page": "^1.5.32",
-    "@types/react": "^16.4.9",
+    "@types/page": "^1.5.33",
+    "@types/react": "^16.4.11",
     "@types/react-dom": "^16.0.7",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
@@ -28,10 +28,10 @@
   },
   "dependencies": {
     "bulma": "^0.7.1",
-    "overmind": "^1.0.0-1534798072865",
+    "overmind": "^1.0.0-1534940481483",
     "page": "^1.8.6",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-overmind": "^1.0.0-1534798072865"
+    "react-overmind": "^1.0.0-1534940481483"
   }
 }
