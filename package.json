@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "devtools": "npx overmind-devtools@next",
     "build": "parcel build src/index.html",
     "start": "parcel src/index.html --port 3000",
     "prettier": "prettier --write \"src/**/*.js\" \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.scss\""
@@ -28,10 +29,10 @@
   },
   "dependencies": {
     "bulma": "^0.7.1",
-    "overmind": "^1.0.0-1534940481483",
+    "overmind": "^1.0.0-1535059157240",
     "page": "^1.8.6",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-overmind": "^1.0.0-1534940481483"
+    "react-overmind": "^1.0.0-1535059157240"
   }
 }
