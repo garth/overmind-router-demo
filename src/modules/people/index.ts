@@ -1,6 +1,2 @@
-import { personRouted } from './actions/personRouted'
+export { actions } from './actions'
 export { state } from './state'
-
-export const actions = {
-  personRouted
-}

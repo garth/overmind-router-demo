@@ -1,3 +1,3 @@
-import { Action } from '../app'
+import { Action } from 'overmind'
 
-export const notFoundRouted: Action = action => action().mutation(state => (state.router.page = 'notFound'))
+export const notFoundRouted: Action = action => action().mutate(state => (state.router.page = 'notFound'))

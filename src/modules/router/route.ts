@@ -1,4 +1,5 @@
 import page from 'page'
+import { Action } from 'overmind'
 
 type ActionBase = (action: Function) => any
 
@@ -15,4 +16,4 @@ export const route = <T extends ActionBase>(url: string, routeAction: T): T =>
     })
   }) as T
 
-setTimeout(() => page.start(), 0)
+export const onInitialize: Action = action => action().do(() => page.start())

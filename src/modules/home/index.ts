@@ -1,5 +1,1 @@
-import { homeRouted } from './actions/homeRouted'
-
-export const actions = {
-  homeRouted
-}
+export { actions } from './actions'
